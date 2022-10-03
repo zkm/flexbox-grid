@@ -1,0 +1,45 @@
+@use "reset";
+
+body {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+}
+
+// Choose the number columns within your grid
+$columns: 12;
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2em auto;
+  > .col,
+  > [class^="col-"] {
+    flex-basis: 100%;
+    text-align: center;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    background-color: rgba(86, 61, 124, 0.15);
+    border: 1px dashed rgba(86, 61, 124, 0.2);
+    color: rgba(0, 0, 0, 0.2);
+
+    &:hover {
+      background-color: rgba(86, 61, 124, 0.25);
+      color: rgba(0, 0, 0, 0.75);
+      cursor:crosshair;
+    }
+  }
+}
+
+@media (min-width: 960px) {
+  @for $i from 1 through $columns {
+    .row {
+      > .col-#{$i} {
+        flex: 0 0 calc(100% / ($columns / $i));
+      }
+
+      > .col-offset-#{$i} {
+        margin-left: calc(100% / (($columns / $i)));
+      }
+    }
+  }
+}

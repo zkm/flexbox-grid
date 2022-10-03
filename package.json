@@ -1,0 +1,16 @@
+{
+  "name": "flexbox-grid",
+  "source": "src/index.html",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "parcel",
+    "build": "parcel build src/index.html"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "2.7.0",
+    "parcel": "latest",
+    "sass": "^1.55.0"
+  }
+}
