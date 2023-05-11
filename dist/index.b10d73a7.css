@@ -8,6 +8,7 @@ html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockq
   vertical-align: baseline;
   text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
+  -moz-text-size-adjust: none;
   text-size-adjust: none;
   border: 0;
   margin: 0;
@@ -72,7 +73,7 @@ body {
   background-color: #563d7c40;
 }
 
-@media (min-width: 960px) {
+@media (width >= 960px) {
   .row > .col-1 {
     flex: 0 0 8.33333%;
   }
