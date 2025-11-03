@@ -4,13 +4,16 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "parcel",
-    "build": "parcel build src/index.html --public-url ./"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "license": "ISC",
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.7.0",
-    "parcel": "^2.8.3",
-    "sass": "^1.55.0"
+    "sass": "^1.93.3",
+    "vite": "^7.1.12"
+  },
+  "resolutions": {
+    "esbuild": ">=0.25.0"
   }
 }
